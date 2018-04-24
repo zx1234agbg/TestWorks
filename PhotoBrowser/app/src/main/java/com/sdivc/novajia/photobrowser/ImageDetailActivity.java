@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.sdivc.novajia.photobrowser.Listener.MultiPointTounchListener;
 import com.sdivc.novajia.photobrowser.Utils.ImageSource;
@@ -35,6 +36,8 @@ public class ImageDetailActivity extends AppCompatActivity {
             imageView.setImageBitmap(map);
             imageView.setScaleType(ImageView.ScaleType.MATRIX);
             imageView.setOnTouchListener(new MultiPointTounchListener());
+        }else{
+            Toast.makeText(this,"文件不存在！",Toast.LENGTH_SHORT).show();
         }
     }
 }

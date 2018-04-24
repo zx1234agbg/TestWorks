@@ -97,9 +97,9 @@ public class GalleryActivity extends AppCompatActivity implements AdapterView.On
         public View getView(int position, View convertView, ViewGroup parent) {
             mPos = position;
             ImageView imageView = new ImageView(mContext);
-            imageView.setBackgroundColor(Color.parseColor("#ff00000000"));
+            imageView.setBackgroundColor(0xFF000000);
             imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            imageView.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            imageView.setLayoutParams(new Gallery.LayoutParams(Gallery.LayoutParams.MATCH_PARENT, Gallery.LayoutParams.MATCH_PARENT));
             imageView.setImageResource(ImageSource.mThUMBids[position]);
             return imageView;
         }
